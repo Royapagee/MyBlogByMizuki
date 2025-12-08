@@ -232,55 +232,55 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
+			name: "日记",
+			url: "/diary/",
+			icon: "material-symbols:book",
+		},
+		{
+			name: "相册",
+			url: "/albums/",
+			icon: "material-symbols:photo-library",
+		},
+		{
 			name: "关于",
 			url: "/about/",
 			icon: "material-symbols:info",
 		},
 		{
-			name: "Diary",
-			url: "/diary/",
-			icon: "material-symbols:book",
-		},
-		{
-			name: "Gallery",
-			url: "/albums/",
-			icon: "material-symbols:photo-library",
-		},
-		{
-			name: "我的生活",
+			name: "我的",
 			url: "/content/",
 			icon: "material-symbols:person",
 			children: [
 				{
-					name: "我的追番",
+					name: "追番",
 					url: "/anime/",
 					icon: "material-symbols:movie",
 				},
 				{
-					name: "Devices",
+					name: "设备",
 					url: "/devices/",
 					icon: "material-symbols:devices",
 					external: false,
 				},
 				{
-					name: "Projects",
+					name: "项目",
 					url: "/projects/",
 					icon: "material-symbols:work",
 				},
 				{
-					name: "Skills",
+					name: "技能",
 					url: "/skills/",
 					icon: "material-symbols:psychology",
 				},
 				{
-					name: "我的经历",
+					name: "经历",
 					url: "/timeline/",
 					icon: "material-symbols:timeline",
 				},
 			],
 		},
 		{
-			name: "我在哪",
+			name: "我在",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
@@ -304,13 +304,38 @@ export const navBarConfig: NavBarConfig = {
 				},
 			],
 		},
+		{
+			name: "友链",
+			url: "/links/",
+			icon: "material-symbols:group",
+			children: [
+				{
+					name: "虚位以待",
+					url: " ",
+					external: true,
+					icon: "material-symbols:person",
+				},
+				{
+					name: "虚位以待",
+					url: " ",
+					external: true,
+					icon: "material-symbols:person",
+				},
+				{
+					name: "虚位以待",
+					url: " ",
+					external: true,
+					icon: "material-symbols:person",
+				},
+			],
+		},
 	],
 };
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/atriavatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "罗伊",
-	bio: "喜欢亚托莉与幻想乡的摄影与数码爱好者，平常对动漫接触不多，但喜欢将喜欢的东西和各种各样的技术结合。",
+	bio: "喜欢动漫与幻想乡的摄影与数码爱好者，平常动漫接触不多，但喜欢将喜欢的东西和各种各样的技术结合。",
 	typewriter: {
 		enable: true, // 启用个人简介打字机效果
 		speed: 40, // 打字速度（毫秒）
@@ -358,7 +383,8 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "公告", // 公告标题
-	content: "欢迎欢迎~相遇就是缘分，不妨停下看看吧", // 公告内容
+	content:
+		"欢迎来到我的小天地 ✨ 在茫茫网海中与你相遇，已是妙不可言的缘分，随便逛逛吧，这里还有很多东西等你来发掘哦~~", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
