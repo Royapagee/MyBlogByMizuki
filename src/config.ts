@@ -232,6 +232,44 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
+			name: "Diary",
+			url: "/diary/",
+			icon: "material-symbols:book",
+		},
+		{
+			name: "Gallery",
+			url: "/albums/",
+			icon: "material-symbols:photo-library",
+		},
+		{
+			name: "My",
+			url: "/content/",
+			icon: "material-symbols:person",
+			children: [
+				{
+					name: "Anime",
+					url: "/anime/",
+					icon: "material-symbols:movie",
+				},
+				{
+					name: "Devices",
+					url: "/devices/",
+					icon: "material-symbols:devices",
+					external: false,
+				},
+				{
+					name: "Projects",
+					url: "/projects/",
+					icon: "material-symbols:work",
+				},
+				{
+					name: "Skills",
+					url: "/skills/",
+					icon: "material-symbols:psychology",
+				},
+			],
+		},
+		{
 			name: "Links",
 			url: "/links/",
 			icon: "material-symbols:link",
@@ -251,42 +289,20 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "My",
-			url: "/content/",
-			icon: "material-symbols:person",
-			children: [
-				{
-					name: "Anime",
-					url: "/anime/",
-					icon: "material-symbols:movie",
-				},
-				{
-					name: "Diary",
-					url: "/diary/",
-					icon: "material-symbols:book",
-				},
-				{
-					name: "Gallery",
-					url: "/albums/",
-					icon: "material-symbols:photo-library",
-				},
-				{
-					name: "Devices",
-					url: "devices/",
-					icon: "material-symbols:devices",
-					external: false,
-				},
-			],
-		},
-		{
-			name: "About",
-			url: "/content/",
-			icon: "material-symbols:info",
+			name: "Others",
+			url: "#",
+			icon: "material-symbols:more-horiz",
 			children: [
 				{
 					name: "About",
-					url: "/about/",
-					icon: "material-symbols:person",
+					url: "/content/",
+					icon: "material-symbols:info",
+					children: [],
+				},
+				{
+					name: "Timeline",
+					url: "/timeline/",
+					icon: "material-symbols:timeline",
 				},
 				{
 					name: "Friends",
@@ -296,26 +312,9 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "Others",
-			url: "#",
-			icon: "material-symbols:more-horiz",
-			children: [
-				{
-					name: "Projects",
-					url: "/projects/",
-					icon: "material-symbols:work",
-				},
-				{
-					name: "Skills",
-					url: "/skills/",
-					icon: "material-symbols:psychology",
-				},
-				{
-					name: "Timeline",
-					url: "/timeline/",
-					icon: "material-symbols:timeline",
-				},
-			],
+			name: "About",
+			url: "/about/",
+			icon: "material-symbols:info",
 		},
 	],
 };
