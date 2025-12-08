@@ -30,20 +30,20 @@ export const siteConfig: SiteConfig = {
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 230, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		fixed: false, // 对访问者隐藏主题色选择器
+		hue: 0, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		fixed: true, // 对访问者隐藏主题色选择器
 	},
 
 	// 特色页面开关配置(关闭不在使用的页面有助于提升SEO,关闭后直接在顶部导航删除对应的页面就行)
 	featurePages: {
 		anime: true, // 番剧页面开关
 		diary: true, // 日记页面开关
-		friends: true, // 友链页面开关
+		friends: false, // 友链页面开关
 		projects: true, // 项目页面开关
 		skills: true, // 技能页面开关
 		timeline: true, // 时间线页面开关
 		albums: true, // 相册页面开关
-		devices: false, // 设备页面开关
+		devices: true, // 设备页面开关
 	},
 
 	// 顶栏标题配置
@@ -136,11 +136,11 @@ export const siteConfig: SiteConfig = {
 			title: "罗伊的幻想之地", // 主页横幅主标题
 
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"When I wish upon a star……",
+				"あの光は何？",
+				"親愛なるあの日々へ",
+				"夢と現と交えては。幻想郷(まぼろしのくに)に、遊ぶがいい。",
+				"夜の帐がおりる顷に，さぁ まばゆいほど光る世界で君を探そう。",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -242,12 +242,12 @@ export const navBarConfig: NavBarConfig = {
 			icon: "material-symbols:photo-library",
 		},
 		{
-			name: "My",
+			name: "关于我",
 			url: "/content/",
 			icon: "material-symbols:person",
 			children: [
 				{
-					name: "Anime",
+					name: "我的追番",
 					url: "/anime/",
 					icon: "material-symbols:movie",
 				},
@@ -267,10 +267,15 @@ export const navBarConfig: NavBarConfig = {
 					url: "/skills/",
 					icon: "material-symbols:psychology",
 				},
+				{
+					name: "我的经历",
+					url: "/timeline/",
+					icon: "material-symbols:timeline",
+				},
 			],
 		},
 		{
-			name: "Links",
+			name: "我在哪里",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
@@ -289,30 +294,7 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "Others",
-			url: "#",
-			icon: "material-symbols:more-horiz",
-			children: [
-				{
-					name: "About",
-					url: "/content/",
-					icon: "material-symbols:info",
-					children: [],
-				},
-				{
-					name: "Timeline",
-					url: "/timeline/",
-					icon: "material-symbols:timeline",
-				},
-				{
-					name: "Friends",
-					url: "/friends/",
-					icon: "material-symbols:group",
-				},
-			],
-		},
-		{
-			name: "About",
+			name: "关于网站",
 			url: "/about/",
 			icon: "material-symbols:info",
 		},
@@ -325,7 +307,7 @@ export const profileConfig: ProfileConfig = {
 	bio: "喜欢亚托莉与幻想乡的摄影与数码爱好者，平常对动漫接触不多，但喜欢将喜欢的东西和各种各样的技术结合。",
 	typewriter: {
 		enable: true, // 启用个人简介打字机效果
-		speed: 80, // 打字速度（毫秒）
+		speed: 40, // 打字速度（毫秒）
 	},
 	links: [
 		{
@@ -435,7 +417,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件位置："top" 表示固定在顶部
 			position: "top",
 			// 所在侧边栏
-			sidebar: "left",
+			sidebar: "right",
 			// CSS 类名
 			class: "onload-animation",
 			// 动画延迟时间
