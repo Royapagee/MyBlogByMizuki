@@ -232,6 +232,11 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
+			name: "关于",
+			url: "/about/",
+			icon: "material-symbols:info",
+		},
+		{
 			name: "Diary",
 			url: "/diary/",
 			icon: "material-symbols:book",
@@ -242,7 +247,7 @@ export const navBarConfig: NavBarConfig = {
 			icon: "material-symbols:photo-library",
 		},
 		{
-			name: "关于我",
+			name: "我的生活",
 			url: "/content/",
 			icon: "material-symbols:person",
 			children: [
@@ -275,7 +280,7 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "我在哪里",
+			name: "我在哪",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
@@ -291,12 +296,13 @@ export const navBarConfig: NavBarConfig = {
 					external: true,
 					icon: "fa6-brands:bilibili",
 				},
+				{
+					name: "QQ Group",
+					url: "https://qm.qq.com/q/4fGJbOqOzC",
+					external: true,
+					icon: "material-symbols:group",
+				},
 			],
-		},
-		{
-			name: "关于网站",
-			url: "/about/",
-			icon: "material-symbols:info",
 		},
 	],
 };
@@ -343,7 +349,7 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: true, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
 		lang: "en", // 设置 Twikoo 评论系统语言为英文
