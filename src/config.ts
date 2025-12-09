@@ -257,7 +257,7 @@ export const navBarConfig: NavBarConfig = {
 			icon: "material-symbols:person",
 			children: [
 				{
-					name: "追番",
+					name: "追剧",
 					url: "/anime/",
 					icon: "material-symbols:movie",
 				},
@@ -302,7 +302,7 @@ export const navBarConfig: NavBarConfig = {
 					icon: "fa6-brands:bilibili",
 				},
 				{
-					name: "QQ Group",
+					name: "QQGroup",
 					url: "https://qm.qq.com/q/4fGJbOqOzC",
 					external: true,
 					icon: "material-symbols:group",
