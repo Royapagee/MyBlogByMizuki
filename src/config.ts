@@ -38,7 +38,7 @@ export const siteConfig: SiteConfig = {
 	featurePages: {
 		anime: true, // 番剧页面开关
 		diary: true, // 日记页面开关
-		friends: false, // 友链页面开关
+		friends: true, // 友链页面开关
 		projects: true, // 项目页面开关
 		skills: true, // 技能页面开关
 		timeline: true, // 时间线页面开关
@@ -202,10 +202,9 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/assets/desktop-banner/1.jpg",
 			"/assets/desktop-banner/1.webp",
 			"/assets/desktop-banner/2.webp",
-			"/assets/desktop-banner/5.webp",
+			"/assets/desktop-banner/3.webp",
 		], // 桌面横幅图片
 		mobile: [
 			"/assets/mobile-banner/1.webp",
@@ -219,7 +218,7 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	position: "center", // 壁纸位置，等同于 object-position
 	carousel: {
 		enable: true, // 启用轮播
-		interval: 5, // 轮播间隔时间（秒）
+		interval: 1.5, // 轮播间隔时间（秒）
 	},
 	zIndex: -1, // 层级，确保壁纸在背景层
 	opacity: 0.8, // 壁纸透明度
@@ -240,6 +239,12 @@ export const navBarConfig: NavBarConfig = {
 			name: "相册",
 			url: "/albums/",
 			icon: "material-symbols:photo-library",
+		},
+		{
+			name: "友链",
+			url: "/friends/",
+			external: false,
+			icon: "material-symbols:group",
 		},
 		{
 			name: "关于",
@@ -301,31 +306,6 @@ export const navBarConfig: NavBarConfig = {
 					url: "https://qm.qq.com/q/4fGJbOqOzC",
 					external: true,
 					icon: "material-symbols:group",
-				},
-			],
-		},
-		{
-			name: "友链",
-			url: "/links/",
-			icon: "material-symbols:group",
-			children: [
-				{
-					name: "虚位以待",
-					url: " ",
-					external: true,
-					icon: "material-symbols:person",
-				},
-				{
-					name: "虚位以待",
-					url: " ",
-					external: true,
-					icon: "material-symbols:person",
-				},
-				{
-					name: "虚位以待",
-					url: " ",
-					external: true,
-					icon: "material-symbols:person",
 				},
 			],
 		},
